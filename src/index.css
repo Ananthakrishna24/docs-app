@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Poppins' -sans;
+}
+
+::selection {
+    color : rgb(232, 145, 47)
+}
