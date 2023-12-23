@@ -45,12 +45,40 @@ function Foreground() {
       description: "Start reading 'Atomic Habits' by James Clear to develop better productivity habits and routines.",
       timestamp: "Dec 20 at 5:45 pm",
       category: "Reading"
+    },
+    {
+      id: 3,
+      title: "Grocery Shopping",
+      description: "Remember to buy eggs, milk, bread, and cheese for the next week. Check the list for other items.",
+      timestamp: "Today at 8:00 am",
+      category: "Personal"
+    },
+    {
+      id: 4,
+      title: "Book Flight Tickets",
+      description: "Search for the cheapest flights to Tokyo for the upcoming business trip in January.",
+      timestamp: "Yesterday at 2:15 pm",
+      category: "Travel"
+    },
+    {
+      id: 5,
+      title: "Yoga Class Enrollment",
+      description: "Enroll in the new yoga class that starts next week. The class schedule is Monday and Thursday at 7 pm.",
+      timestamp: "Dec 18 at 9:30 am",
+      category: "Health"
+    },
+    {
+      id: 6,
+      title: "Read 'Atomic Habits'",
+      description: "Start reading 'Atomic Habits' by James Clear to develop better productivity habits and routines.",
+      timestamp: "Dec 20 at 5:45 pm",
+      category: "Reading"
     }
   ];
   
   return (
-    <div className="fixed top-0 left-0 z-[3] w-full h-full overflow-auto pt-15 px-4 md:px-8 lg:px-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="fixed top-0 left-0 z-[3] w-full h-full p-5 flex items-start justify-center overflow-auto pt-[8%]">
+      <div className="grid grid-cols-3 gap-10">
         {sampleNotes.map((note) => (
           <Card
             key={note.id}

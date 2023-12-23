@@ -12,15 +12,15 @@ function Card({ title, description, timestamp, category }) {
 
   return (
     <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={cardVariants}
-      transition={{ duration: 0.5 }}
-      drag // Enables dragging
-      dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }} // Constraints of dragging
-      className="max-w-sm rounded overflow-hidden shadow-md p-4 m-4 relative backdrop-filter backdrop-blur-2xl bg-opacity-20 border border-gray-300"
-      style={{ boxShadow: '0 4px 6px 0 hsla(0, 0%, 100%, 0.1), 0 1px 3px 0 hsla(0, 0%, 100%, 0.08)' }}
-    >
+    initial="hidden"
+    animate="visible"
+    variants={cardVariants}
+    transition={{ duration: 5, type: 'spring' }} 
+    drag
+    dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+    className="max-w-sm rounded overflow-hidden shadow-md p-4 m-4 relative backdrop-filter backdrop-blur-2xl bg-opacity-20 border border-gray-300"
+    style={{ boxShadow: '0 4px 6px 0 hsla(0, 0%, 100%, 0.1), 0 1px 3px 0 hsla(0, 0%, 100%, 0.08)' }}>
+
       <div className="absolute top-0 right-0 px-6 py-4">
         <span className="inline-block bg-gray-800 rounded-full px-3 py-1 text-sm font-semibold text-gray-200">{category}</span>
       </div>
