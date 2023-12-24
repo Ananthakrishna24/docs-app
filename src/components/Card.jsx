@@ -15,7 +15,7 @@ function Card({ title, description, timestamp, category }) {
     initial="hidden"
     animate="visible"
     variants={cardVariants}
-    transition={{ duration: 5, type: 'spring' }} 
+    transition={{ duration: 2, type: 'spring' }} 
     drag
     dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
     className="max-w-sm rounded overflow-hidden shadow-md p-4 m-4 relative backdrop-filter backdrop-blur-2xl bg-opacity-20 border border-gray-300"

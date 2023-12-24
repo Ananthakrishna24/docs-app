@@ -9,7 +9,7 @@ function Background() {
         Documents
       </div>
       <h1 className="text-[13vh] leading-none tracking-lighter absolute top-1/2 left-1/2 -translate-x-[50%] -translate-y-[50%] font-semibold text-zinc-900">
-        DOCS.
+        DOCS
       </h1>
     </div>
     </>
