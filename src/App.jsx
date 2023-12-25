@@ -2,6 +2,7 @@
 import React from "react";
 import Background from "./components/background";
 import Foreground from "./components/Foreground";
+import "./app.css";
 
 function App() {
   return (

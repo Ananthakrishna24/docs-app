@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import Card from "./Card";
-import Categories from "./BottomDock";
+import Category from "./Category";
+import BottomDock from "./BottomDock";
 
 function Foreground() {
   const sampleNotes = [
@@ -169,7 +170,7 @@ function Foreground() {
 
   return (
     <>
-      <Categories />
+      <Category />
       <div className="fixed top-0 left-0 z-[3] w-full h-full p-5 flex items-start justify-center overflow-auto pt-[10rem]">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10">
           {sampleNotes.map((note) => (
@@ -183,6 +184,7 @@ function Foreground() {
           ))}
         </div>
       </div>
+      <BottomDock/>
     </>
   );
 }
