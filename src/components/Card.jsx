@@ -3,11 +3,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
+import { useHistory } from 'react-router-dom'; 
 
 function Card({ title, description, timestamp, category }) {
+  const history = useHistory(); 
+
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
+  };
+
+  const handleArrowClick = () => {
+    history.push('/note-page'); 
   };
 
   return (
@@ -34,7 +41,7 @@ function Card({ title, description, timestamp, category }) {
         <span className="text-sm text-gray-300">{timestamp}</span>
       </div>
       <div className="px-6 py-4 absolute bottom-0 right-0">
-        <FaArrowRight className="text-white hover:text-gray-300"/>
+        <FaArrowRight className="text-white hover:text-gray-300" onClick={handleArrowClick}/>
       </div>
     </motion.div>
   );

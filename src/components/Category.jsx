@@ -1,6 +1,8 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
+// eslint-disable-next-line react/prop-types
 function Category({ onAddCategory }) {
   const [categories, setCategories] = useState(['All', 'Home', 'Travel']);
   const [selected, setSelected] = useState('All');
