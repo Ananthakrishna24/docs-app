@@ -1,12 +1,25 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { motion } from 'framer-motion';
 import { IoHomeOutline, IoSettingsOutline, IoCreateOutline, IoTrashOutline } from 'react-icons/io5';
+import { useNavigate } from 'react-router-dom'; 
 
 function BottomDock() {
-  const [selected, setSelected] = React.useState(null);
+  const navigate = useNavigate(); 
+  const [selected, setSelected] = React.useState('Home'); // Set 'Home' as the default selected
+
+  useEffect(() => {
+    navigate('/');
+  }, [navigate]);
+
+  const navigationMap = {
+    'Home': '/',
+    'Settings': '/settings', 
+    'Create New': '/create', 
+  };
 
   const handleClick = (item) => {
     setSelected(item);
+    navigate(navigationMap[item]); 
   };
 
   const handleDelete = () => {

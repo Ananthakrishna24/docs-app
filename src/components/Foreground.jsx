@@ -183,8 +183,8 @@ function Foreground() {
             />
           ))}
         </div>
+        <BottomDock/>
       </div>
-      <BottomDock/>
     </>
   );
 }
