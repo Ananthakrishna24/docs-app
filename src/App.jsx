@@ -1,15 +1,18 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import Background from "./components/background";
-import Foreground from "./components/Foreground";
 import "./app.css";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from "./Pages/HomePage";
+import NotePage from "./Pages/NotePage";
 
 function App() {
   return (
-    <div className="bg-zinc-800 w-full h-screen relative">
-      <Background />
-      <Foreground />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/note-page" element={<NotePage />} />
+      </Routes>
+    </Router>
   );
 }
 

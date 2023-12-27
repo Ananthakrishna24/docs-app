@@ -3,10 +3,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
-import { useHistory } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; 
 
 function Card({ title, description, timestamp, category }) {
-  const history = useHistory(); 
+  const navigate = useNavigate(); 
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -14,7 +14,7 @@ function Card({ title, description, timestamp, category }) {
   };
 
   const handleArrowClick = () => {
-    history.push('/note-page'); 
+    navigate('/note-page'); 
   };
 
   return (
