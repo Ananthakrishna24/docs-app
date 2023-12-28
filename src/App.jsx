@@ -15,7 +15,7 @@ function App() {
         <Route path="/note-page" element={<NotePage />} />
         <Route path="/create" element={<CreateNew />} />
       </Routes>
-      {/* <BottomDock /> */}
+      <BottomDock />
     </Router>
   );
 }
